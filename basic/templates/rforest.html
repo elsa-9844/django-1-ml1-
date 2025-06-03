@@ -1,0 +1,84 @@
+<html>
+    <body style="background-color:#f1f1f1;"></body>
+    <title>drug Classification</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {box-sizing: border-box;}
+            body {font-family: Timesnewromen;}
+            header {
+                    background-color: #323b4c;
+                    padding: 30px;
+                    text-align: center;
+                    font-size: 35px;
+                    color: white;
+                }
+                footer {
+                        background-color: white;
+                        padding: 70px;
+                        text-align: center;
+                        color: #323b4c;
+                    }    
+        </style>
+    </head>
+    <header><h1>Drug Classification</h1><h4>Random Forest Algorithm</h4></header>
+    <footer>
+        <form method="POST">
+            {% csrf_token %}
+                    <table>
+                        <tr>
+                            <td>
+                                Age:-
+                            </td>
+                            <td>
+                                <input type="text" name="aa">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Sex:-
+                            </td>
+                            <td><input type="checkbox" name="male">Male</td>
+                            <td><input type="checkbox" name="female">Female</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                BP:-
+                            </td>
+                            <td><input type="checkbox" name="high">High</td>
+                            <td><input type="checkbox" name="low">Low</td>
+                            <td><input type="checkbox" name="nom">Normal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Cholesterol:-
+                            </td>
+                            <td><input type="checkbox" name="hi">High</td>
+                            <td><input type="checkbox" name="n1">Normal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Sodium to Potassium Ratio in Blood:-
+                            </td>
+                            <td>
+                                <input type="text" name="bb">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit" name="submit">submit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Drug Type:-</td>
+                            <td>{{result}}</td>
+                        </tr>
+                        <tr>
+                            <td>Accuracy:-</td>
+                            <td>{{acc}}</td>
+                        </tr>
+                    </table>
+            </form>
+    </footer>
+</html>
